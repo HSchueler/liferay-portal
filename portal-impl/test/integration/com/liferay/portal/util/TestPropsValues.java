@@ -18,9 +18,7 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.HttpUtil;
-import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.*;
 import com.liferay.portal.model.Company;
 import com.liferay.portal.model.CompanyConstants;
 import com.liferay.portal.model.Group;
@@ -46,6 +44,10 @@ import java.util.List;
  * @author Raymond Augé
  */
 public class TestPropsValues {
+
+	public static final boolean COMPANY_SECURITY_STRANGERS_WITH_MX =
+			GetterUtil.getBoolean(PropsUtil.get(com.liferay.portal
+				.kernel.util.PropsKeys.COMPANY_SECURITY_STRANGERS_WITH_MX));
 
 	public static final String COMPANY_WEB_ID;
 
